@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [timeLeft, setTimeLeft] = useState({ minutes: 1, seconds: 59 });
+  const [timeLeft, setTimeLeft] = useState({ minutes: 1, seconds: 23 });
 
   useEffect(() => {
     // Facebook Pixel tracking
@@ -29,7 +29,7 @@ export default function Home() {
       (window as any).fbq('track', 'PageView');
     }
 
-    // Countdown timer - minutes and seconds
+    // Countdown timer
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev.seconds > 0) {
@@ -62,187 +62,146 @@ export default function Home() {
         color: '#ffffff',
         position: 'relative',
         overflowX: 'hidden',
-        paddingTop: '43px',
-        paddingBottom: '80px'
+        paddingTop: '15px',
+        paddingBottom: '30px'
       }}>
-        {/* Bottom gradient */}
-        <div style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: '200px',
-          background: 'linear-gradient(0deg, #171717 50%, rgba(23, 23, 23, 0) 100%)',
-          pointerEvents: 'none',
-          zIndex: 5
-        }}></div>
-
-        {/* Main container */}
         <div style={{
           maxWidth: '375px',
           margin: '0 auto',
-          padding: '0 10px',
+          padding: '0 15px',
           position: 'relative',
           zIndex: 10
         }}>
 
-          {/* Timer */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '6px',
-            marginBottom: '30px'
-          }}>
-            <div style={{
-              background: '#ffffff',
-              color: '#171717',
-              width: '86px',
-              height: '40px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '5px',
-              fontSize: '28px',
-              fontWeight: 700,
-              boxShadow: '4px 4px 25px 1px rgba(101, 253, 8, 0.5)'
-            }}>
-              {String(timeLeft.minutes).padStart(2, '0')}
-            </div>
-            <div style={{ fontSize: '28px', fontWeight: 700 }}>:</div>
-            <div style={{
-              background: '#ffffff',
-              color: '#171717',
-              width: '86px',
-              height: '40px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '5px',
-              fontSize: '28px',
-              fontWeight: 700,
-              boxShadow: '4px 4px 25px 1px rgba(101, 253, 8, 0.5)'
-            }}>
-              {String(timeLeft.seconds).padStart(2, '0')}
-            </div>
-          </div>
-
-          {/* Image */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginBottom: '19px'
-          }}>
-            <img
-              src="/instructor.jpg"
-              alt="Islomiy Moliya Mutaxassisi"
-              style={{
-                width: '100%',
-                maxWidth: '300px',
-                height: 'auto',
-                borderRadius: '20px',
-                filter: 'drop-shadow(-4px 4px 15px rgba(2, 235, 81, 0.5))'
-              }}
-            />
-          </div>
-
-          {/* Title */}
+          {/* Title - Professional styling with gradient */}
           <h1 style={{
-            fontSize: '21px',
-            lineHeight: '29px',
+            fontSize: '22px',
+            lineHeight: '28px',
             fontWeight: 900,
             textTransform: 'uppercase',
             textAlign: 'center',
-            marginBottom: '12px',
-            letterSpacing: '-0.02em'
+            marginBottom: '15px',
+            letterSpacing: '-0.5px',
+            background: 'linear-gradient(135deg, #ffffff 0%, #02EB51 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textShadow: 'none',
+            filter: 'drop-shadow(0 2px 8px rgba(2, 235, 81, 0.3))'
           }}>
             Qanday qilib islom moliyasi va savodxonlikni oshirib barakali biznes boshlash mumkin?
           </h1>
 
-          {/* Subtitle */}
-          <p style={{
-            textAlign: 'center',
-            fontSize: '14px',
-            color: '#919191',
-            marginBottom: '19px',
-            fontWeight: 700
-          }}>
-            Islom Moliyasidan 10 yillik tajriba va 10 dan oshiq kitoblar muallifi
-          </p>
-
-          {/* Benefits */}
-          <div style={{ marginBottom: '19px' }}>
-            <h2 style={{ fontSize: '14px', fontWeight: 700, marginBottom: '11px' }}>
-              Marafonda siz:
-            </h2>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '7px' }}>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '12px', color: '#808080', lineHeight: '1.3' }}>
-                <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0 }}>—</span>
-                <span>Qanday qilib islomiy savodxonlikni oshirib barakali biznes boshlashni</span>
-              </li>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '12px', color: '#808080', lineHeight: '1.3' }}>
-                <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0 }}>—</span>
-                <span>Rasululloh s.a.v ning sahobalari qanday qilib savdo qilishganini</span>
-              </li>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '12px', color: '#808080', lineHeight: '1.3' }}>
-                <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0 }}>—</span>
-                <span>Islomda pul ilmi va pulga oid hukmlarni o&apos;rganasiz</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Bonus */}
+          {/* Main content - Text on left, Image + Timer on right */}
           <div style={{
-            marginBottom: '20px',
             display: 'flex',
-            justifyContent: 'center'
+            gap: '10px',
+            marginBottom: '15px',
+            position: 'relative',
+            alignItems: 'flex-start'
           }}>
+            {/* Left side - Text content */}
+            <div style={{ flex: 1, zIndex: 2 }}>
+              {/* Subtitle */}
+              <p style={{
+                fontSize: '12px',
+                color: '#9CA3AF',
+                marginBottom: '10px',
+                fontWeight: 700,
+                lineHeight: '1.3'
+              }}>
+                Islom Moliyasidan 10 yillik tajriba va 10 dan oshiq kitoblar muallifi
+              </p>
+
+              {/* Benefits */}
+              <div>
+                <h2 style={{
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  marginBottom: '8px',
+                  color: '#ffffff'
+                }}>
+                  Marafonda siz:
+                </h2>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
+                    <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
+                    <span>Qanday qilib islomiy savodxonlikni oshirib barakali biznes boshlashni</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
+                    <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
+                    <span>Rasululloh s.a.v ning sahobalari qanday qilib savdo qilishganini</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
+                    <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
+                    <span>Islomda pul ilmi va pulga oid hukmlarni o&apos;rganasiz</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right side - Image + Timer */}
             <div style={{
-              maxWidth: '271px',
-              width: '100%',
-              background: 'linear-gradient(90deg, #03D149 0%, #016B25 100%)',
-              borderRadius: '10px',
-              padding: '1px'
+              width: '150px',
+              flexShrink: 0,
+              position: 'relative',
+              zIndex: 1
             }}>
+              {/* Image with professional effects */}
               <div style={{
-                background: '#171717',
-                borderRadius: '9px',
-                padding: '10px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px'
+                position: 'relative',
+                borderRadius: '15px',
+                overflow: 'hidden',
+                boxShadow: '0 8px 25px rgba(2, 235, 81, 0.3), 0 0 0 2px rgba(2, 235, 81, 0.2), inset 0 0 20px rgba(2, 235, 81, 0.1)',
+                border: '3px solid transparent',
+                backgroundImage: 'linear-gradient(#171717, #171717), linear-gradient(135deg, #02EB51, #14AC47)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'padding-box, border-box',
+                marginBottom: '10px'
+              }}>
+                <img
+                  src="/instructor.jpg"
+                  alt="Islomiy Moliya Mutaxassisi"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block'
+                  }}
+                />
+              </div>
+
+              {/* Timer - Professional styling with gradient border */}
+              <div style={{
+                position: 'relative',
+                background: 'linear-gradient(135deg, #02EB51, #14AC47)',
+                padding: '2px',
+                borderRadius: '12px',
+                boxShadow: '0 4px 25px rgba(2, 235, 81, 0.5), 0 0 30px rgba(2, 235, 81, 0.3)'
               }}>
                 <div style={{
-                  transform: 'rotate(21deg)',
-                  flexShrink: 0,
-                  fontSize: '32px',
-                  lineHeight: 1
-                }}>🎁</div>
-                <div style={{ flex: 1 }}>
-                  <p style={{
-                    fontSize: '12px',
-                    fontWeight: 700,
-                    lineHeight: '1.2',
-                    marginBottom: '2px'
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: '#ffffff',
+                  padding: '8px 15px',
+                  borderRadius: '10px'
+                }}>
+                  <div style={{
+                    color: '#171717',
+                    fontSize: '20px',
+                    fontWeight: 900,
+                    letterSpacing: '1.5px'
                   }}>
-                    <span style={{ color: '#02EB51' }}>BONUS:</span> maxsus sovg&apos;a
-                  </p>
-                  <p style={{
-                    fontSize: '10px',
-                    color: '#919191',
-                    lineHeight: '1.4',
-                    fontWeight: 700
-                  }}>
-                    Biznes boshlashdagi eng muhim baraka omillari darsligi
-                  </p>
+                    {String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Button */}
+          {/* Button - Professional design */}
           <div style={{
-            marginBottom: '10px',
+            marginBottom: '12px',
             display: 'flex',
             justifyContent: 'center'
           }}>
@@ -253,38 +212,39 @@ export default function Home() {
               style={{
                 display: 'block',
                 width: '100%',
-                maxWidth: '331px',
                 textDecoration: 'none'
               }}
             >
               <button style={{
                 width: '100%',
-                background: 'linear-gradient(90deg, #14AC47 16.83%, #09C348 51%, #14AC47 81.73%)',
+                background: 'linear-gradient(135deg, #14AC47 0%, #09C348 50%, #14AC47 100%)',
                 color: '#ffffff',
                 fontWeight: 700,
-                fontSize: '18px',
-                padding: '22px 0',
+                fontSize: '16px',
+                padding: '18px 0',
                 borderRadius: '20px',
                 border: 'none',
-                boxShadow: '0px 5px 0px 0px #007427',
+                boxShadow: '0px 5px 0px 0px #007427, 0 8px 25px rgba(2, 235, 81, 0.3)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '13px',
+                gap: '10px',
                 cursor: 'pointer',
-                animation: 'pulse 2s ease-in-out infinite'
+                animation: 'pulse 2s ease-in-out infinite',
+                transition: 'all 0.3s ease'
               }}>
                 <div style={{
-                  width: '21px',
-                  height: '21px',
+                  width: '22px',
+                  height: '22px',
                   background: '#ffffff',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
                 }}>
-                  <svg style={{ width: '12px', height: '12px', color: '#02EB51' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3.5} d="M5 13l4 4L19 7" />
+                  <svg style={{ width: '13px', height: '13px', color: '#02EB51' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 BEPUL QATNASHISH
@@ -292,14 +252,67 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Bottom text */}
+          {/* Bonus - Professional design */}
+          <div style={{
+            marginBottom: '12px',
+            display: 'flex',
+            justifyContent: 'center'
+          }}>
+            <div style={{
+              maxWidth: '100%',
+              width: '100%',
+              background: 'linear-gradient(135deg, #03D149 0%, #016B25 100%)',
+              borderRadius: '12px',
+              padding: '2px',
+              boxShadow: '0 3px 15px rgba(3, 209, 73, 0.3)'
+            }}>
+              <div style={{
+                background: '#171717',
+                borderRadius: '10px',
+                padding: '10px 12px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px'
+              }}>
+                <div style={{
+                  transform: 'rotate(21deg)',
+                  flexShrink: 0,
+                  fontSize: '30px',
+                  lineHeight: 1,
+                  filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+                }}>🎁</div>
+                <div style={{ flex: 1 }}>
+                  <p style={{
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    lineHeight: '1.3',
+                    marginBottom: '2px'
+                  }}>
+                    <span style={{ color: '#02EB51' }}>BONUS:</span> <span style={{ color: '#ffffff' }}>maxsus sovg&apos;a</span>
+                  </p>
+                  <p style={{
+                    fontSize: '10px',
+                    color: '#9CA3AF',
+                    lineHeight: '1.3',
+                    fontWeight: 600
+                  }}>
+                    Biznes boshlashdagi eng muhim baraka omillari darsligi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom text - Professional styling with pulsing effect */}
           <p style={{
             textAlign: 'center',
-            fontSize: '12px',
-            color: '#919191',
-            fontWeight: 700
+            fontSize: '13px',
+            color: '#02EB51',
+            fontWeight: 700,
+            textShadow: '0 0 10px rgba(2, 235, 81, 0.5), 0 2px 4px rgba(0,0,0,0.3)',
+            animation: 'textPulse 2s ease-in-out infinite'
           }}>
-            Joylar soni cheklangan!
+            ⚡ Joylar soni cheklangan! ⚡
           </p>
 
         </div>
@@ -308,17 +321,33 @@ export default function Home() {
           @keyframes pulse {
             0%, 100% {
               transform: scale(1);
-              box-shadow: 0 0 0 0 rgba(2, 235, 81, 0.7), 0px 5px 0px 0px #007427;
+              box-shadow: 0 0 0 0 rgba(2, 235, 81, 0.7), 0px 5px 0px 0px #007427, 0 8px 25px rgba(2, 235, 81, 0.3);
             }
             50% {
-              transform: scale(1.05);
-              box-shadow: 0 0 0 10px rgba(2, 235, 81, 0), 0px 5px 0px 0px #007427;
+              transform: scale(1.03);
+              box-shadow: 0 0 0 15px rgba(2, 235, 81, 0), 0px 5px 0px 0px #007427, 0 12px 35px rgba(2, 235, 81, 0.4);
             }
           }
 
+          @keyframes textPulse {
+            0%, 100% {
+              opacity: 1;
+              text-shadow: 0 0 10px rgba(2, 235, 81, 0.5), 0 2px 4px rgba(0,0,0,0.3);
+            }
+            50% {
+              opacity: 0.8;
+              text-shadow: 0 0 20px rgba(2, 235, 81, 0.8), 0 2px 4px rgba(0,0,0,0.3);
+            }
+          }
+
+          button:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0px 7px 0px 0px #007427, 0 12px 35px rgba(2, 235, 81, 0.5) !important;
+          }
+
           button:active {
-            transform: translateY(4px) !important;
-            box-shadow: 0px 1px 0px 0px #007427 !important;
+            transform: translateY(3px) !important;
+            box-shadow: 0px 2px 0px 0px #007427, 0 5px 15px rgba(2, 235, 81, 0.3) !important;
           }
         `}</style>
       </div>

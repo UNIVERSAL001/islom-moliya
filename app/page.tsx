@@ -199,59 +199,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Button - Professional design */}
-          <div style={{
-            marginBottom: '12px',
-            display: 'flex',
-            justifyContent: 'center'
-          }}>
-            <a
-              href="https://t.me/+KmLW8qDpAlo5YTVi"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'block',
-                width: '100%',
-                textDecoration: 'none'
-              }}
-            >
-              <button style={{
-                width: '100%',
-                background: 'linear-gradient(135deg, #14AC47 0%, #09C348 50%, #14AC47 100%)',
-                color: '#ffffff',
-                fontWeight: 700,
-                fontSize: '16px',
-                padding: '18px 0',
-                borderRadius: '20px',
-                border: 'none',
-                boxShadow: '0px 5px 0px 0px #007427, 0 8px 25px rgba(2, 235, 81, 0.3)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-                cursor: 'pointer',
-                animation: 'pulse 2s ease-in-out infinite',
-                transition: 'all 0.3s ease'
-              }}>
-                <div style={{
-                  width: '22px',
-                  height: '22px',
-                  background: '#ffffff',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
-                }}>
-                  <svg style={{ width: '13px', height: '13px', color: '#02EB51' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                BEPUL QATNASHISH
-              </button>
-            </a>
-          </div>
-
           {/* Bonus - Professional design */}
           <div style={{
             marginBottom: '12px',
@@ -310,10 +257,64 @@ export default function Home() {
             color: '#02EB51',
             fontWeight: 700,
             textShadow: '0 0 10px rgba(2, 235, 81, 0.5), 0 2px 4px rgba(0,0,0,0.3)',
-            animation: 'textPulse 2s ease-in-out infinite'
+            animation: 'textPulse 2s ease-in-out infinite',
+            marginBottom: '12px'
           }}>
             ⚡ Joylar soni cheklangan! ⚡
           </p>
+
+          {/* Button - Professional design */}
+          <div style={{
+            marginBottom: '12px',
+            display: 'flex',
+            justifyContent: 'center'
+          }}>
+            <a
+              href="https://t.me/+KmLW8qDpAlo5YTVi"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'block',
+                width: '100%',
+                textDecoration: 'none'
+              }}
+            >
+              <button style={{
+                width: '100%',
+                background: 'linear-gradient(135deg, #14AC47 0%, #09C348 50%, #14AC47 100%)',
+                color: '#ffffff',
+                fontWeight: 700,
+                fontSize: '16px',
+                padding: '18px 0',
+                borderRadius: '20px',
+                border: 'none',
+                boxShadow: '0px 5px 0px 0px #007427, 0 8px 25px rgba(2, 235, 81, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '10px',
+                cursor: 'pointer',
+                animation: 'pulse 2s ease-in-out infinite',
+                transition: 'all 0.3s ease'
+              }}>
+                <div style={{
+                  width: '22px',
+                  height: '22px',
+                  background: '#ffffff',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
+                }}>
+                  <svg style={{ width: '13px', height: '13px', color: '#02EB51' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                BEPUL QATNASHISH
+              </button>
+            </a>
+          </div>
 
         </div>
 

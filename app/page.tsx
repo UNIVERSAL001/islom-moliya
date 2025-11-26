@@ -75,13 +75,13 @@ export default function Home() {
 
           {/* Title - Professional styling with gradient */}
           <h1 style={{
-            fontSize: '22px',
-            lineHeight: '28px',
+            fontSize: '19px',
+            lineHeight: '25px',
             fontWeight: 900,
             textTransform: 'uppercase',
             textAlign: 'center',
             marginBottom: '15px',
-            letterSpacing: '-0.5px',
+            letterSpacing: '-0.3px',
             background: 'linear-gradient(135deg, #ffffff 0%, #02EB51 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -121,7 +121,7 @@ export default function Home() {
                   marginBottom: '8px',
                   color: '#ffffff'
                 }}>
-                  Marafonda siz:
+                  30 kunlik bepul marafonda siz:
                 </h2>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>

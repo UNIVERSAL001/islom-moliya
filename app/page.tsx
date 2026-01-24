@@ -270,7 +270,7 @@ export default function Home() {
             justifyContent: 'center'
           }}>
             <a
-              href="https://t.me/+KmLW8qDpAlo5YTVi"
+              href="https://t.me/+SBk2ahePVT44NWUy"
               target="_blank"
               rel="noopener noreferrer"
               style={{

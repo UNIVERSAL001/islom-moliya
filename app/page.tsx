@@ -85,10 +85,10 @@ export default function Home() {
             background: 'linear-gradient(135deg, #ffffff 0%, #02EB51 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            textShadow: 'none',
-            filter: 'drop-shadow(0 2px 8px rgba(2, 235, 81, 0.3))'
-          }}>
+            MozBackgroundClip: 'text',
+            MozTextFillColor: 'transparent',
+            color: '#ffffff'
+          } as React.CSSProperties}>
             Tadbirkorning Ramazoni qanday boʻlishi kerak?
           </h1>
 

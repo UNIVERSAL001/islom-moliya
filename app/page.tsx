@@ -89,7 +89,7 @@ export default function Home() {
             textShadow: 'none',
             filter: 'drop-shadow(0 2px 8px rgba(2, 235, 81, 0.3))'
           }}>
-            Qanday qilib islom moliyasi va savodxonlikni oshirib barakali biznes boshlash mumkin?
+            Tadbirkorning Ramazoni qanday boʻlishi kerak?
           </h1>
 
           {/* Main content - Text on left, Image + Timer on right */}
@@ -126,7 +126,15 @@ export default function Home() {
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
                     <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
-                    <span>Qanday qilib islomiy savodxonlikni oshirib barakali biznes boshlashni</span>
+                    <span>Ramazonda tijoratning sar-hisobini</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
+                    <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
+                    <span>Islom Moliyasi asnosida Ramazonga tayyorlanishni</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
+                    <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
+                    <span>Qanday qilib Islom Moliyasi savodxonlikni oshirib barakali biznes boshlashni</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px', fontSize: '11px', color: '#9CA3AF', lineHeight: '1.3' }}>
                     <span style={{ color: '#02EB51', marginTop: '1px', flexShrink: 0, fontSize: '12px' }}>—</span>
